@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Meme</title>
+	<style>
+		#meme_text {
+			background-color: transparent;
+			font-size: 40px;
+			font-family: "Impact";
+			color: white;
+			text-shadow: #6a6060 0px 0px 10px;
+			width: 600px;
+			position: absolute;
+			left: 400px;
+			top: 400px;
+		}
+
+		@media screen AND (max-width:600px){
+/*	renkames naudoti ar ne, tarkim menu bus per visa, o turinys per puse*/
+	.container{
+		width: 90%;
+		margin: auto;
+	}
+	.cols1{ width: 8.33%; }
+	.cols2{ width: 16.66%; }
+	.cols3{ width: 25%; }
+	.cols4{ width: 33.33%; }
+	.cols5{ width: 41.66%; }
+	.cols6{ width: 50%; }
+	.cols7{ width: 58.33%; }
+	.cols8{ width: 66.66%; }
+	.cols9{ width: 75%; }
+	.cols10{ width: 83.33%; }
+	.cols11{ width: 91.66%; }
+	.cols12{ width: 100%; }
+
+}
+/*alt shift rodykle zemyn*/
+@media screen AND (min-width:601px){
+	.container{
+		width: 85%;
+		margin: auto;
+	}
+	.colm1{ width: 8.33%; }
+	.colm2{ width: 16.66%; }
+	.colm3{ width: 25%; }
+	.colm4{ width: 33.33%; }
+	.colm5{ width: 41.66%; }
+	.colm6{ width: 50%; }
+	.colm7{ width: 58.33%; }
+	.colm8{ width: 66.66%; }
+	.colm9{ width: 75%; }
+	.colm10{ width: 83.33%; }
+	.colm11{ width: 91.66%; }
+	.colm12{ width: 100%; }
+
+}
+
+@media screen AND (min-width:993px){
+	.container{
+		width: 70%;
+		margin: auto;
+	}
+	.coll1{ width: 8.33%; }
+	.coll2{ width: 16.66%; }
+	.coll3{ width: 25%; }
+	.coll4{ width: 33.33%; }
+	.coll5{ width: 41.66%; }
+	.coll6{ width: 50%; }
+	.coll7{ width: 58.33%; }
+	.coll8{ width: 66.66%; }
+	.coll9{ width: 75%; }
+	.coll10{ width: 83.33%; }
+	.coll11{ width: 91.66%; }
+	.coll12{ width: 100%; }
+
+}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="coll4 colm6 cols12">
+
+				<form>
+					Meme text: <input type="text" id="user_text" maxlength="70" oninput="update_text()"></br> </br>
+
+					Select a picture: <input type="file" id="user_picture">
+
+				</form>
+
+				<div id="meme_text"></div>
+				<div id="meme_picture"><img src="images/cat2.jpg" height="500" width="500"></div>
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function update_text(){
+			var user_text = document.getElementById("user_text");
+			var meme_text = document.getElementById("meme_text");
+			meme_text.innerHTML = user_text.value;
+		}
+	</script>
+
+
+
+</body>
+
+
+</html>
